@@ -1,0 +1,23 @@
+.keyPad {
+	width: 340px;
+	height: calc(100% - 110px);
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	grid-gap: 10px;
+}
+
+@media (max-height: 430px) {
+	.keyPad {
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: repeat(4, 1fr);
+	}
+}
+
+@media (max-width: 340px) {
+	.keyPad {
+		width: 100%;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(5, 1fr);
+	}
+}
