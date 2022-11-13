@@ -154,8 +154,8 @@ export default function evaluateExpression(expression) {
 		return '';
 	}
 	let result = evaluatePostfix(infixToPostfix(expression.replace(/\s/g, '')));
-	if (result > Number.MAX_SAFE_INTEGER) {
-		throw 'number too large';
+	if (result > Number.MAX_SAFE_INTEGER || result < Number.MIN_SAFE_INTEGER) {
+		throw 'number out of range';
 	}
 	if (isNaN(result)) {
 		throw 'NaN';

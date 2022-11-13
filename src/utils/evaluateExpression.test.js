@@ -46,7 +46,10 @@ describe('Expression evaluator', () => {
 	it('handles large numbers', () => {
 		expect(function () {
 			evaluateExpression(Number.MAX_SAFE_INTEGER + 1 + '');
-		}).toThrow('number too large');
+		}).toThrow('number out of range');
+		expect(function () {
+			evaluateExpression(Number.MIN_SAFE_INTEGER - 1 + '');
+		}).toThrow('number out of range');
 	});
 
 	it('handles invalid expressions', () => {
