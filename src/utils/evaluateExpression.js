@@ -68,7 +68,7 @@ function tokenizeExpression(expression) {
 		expressionArr.pop();
 	}
 
-	return expressionArr.join('').split(/(-?[0-9]+\.?[0-9]?|[*^+~\/()]{1})/);
+	return expressionArr.join('').split(/(-?[0-9]+\.?[0-9]*|[*^+~\/()]{1})/);
 }
 
 //uses shunting yard algorithm to convert from infix to postfix notation https://en.wikipedia.org/wiki/Shunting_yard_algorithm

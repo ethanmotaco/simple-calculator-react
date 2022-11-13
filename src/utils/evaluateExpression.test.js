@@ -30,7 +30,7 @@ describe('Expression evaluator', () => {
 	});
 
 	it('handles decimals', () => {
-		expect(evaluateExpression('2.2 + 2.8')).toBe('5');
+		expect(evaluateExpression('2.22 + 2.78')).toBe('5');
 	});
 
 	it('handles complex expressions', () => {
